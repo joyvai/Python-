@@ -42,9 +42,18 @@ def chooseCave():
 		print 'Which cave will you go into?(1 or 2)'
 		cave = raw_input() # it's taking input from user
 	return cave
+"""
+The next function the program defines is named checkCave() . Notice the text chosenCave
+between the parentheses. This is a parameter: a local variable that is assigned the argument
+passed when this function is called.
+""" 
 
 def checkCave(chooseCave): 
 	print 'You approach the cave...'
+	
+	"""The time module has a function called sleep() that pauses the program. Line 21 passes the
+	   integer value 2 so that time.sleep() will pause the program for 2 seconds. 
+	 """
 	time.sleep(2) # Suspend execution of the current thread for the given number of seconds.
 	# after 2 seconds it' suspends.
 	print 'It is dark and spooky...'
