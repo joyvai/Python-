@@ -1,4 +1,5 @@
-# def means here function.In C language we start void.
+# This is a python program
+# def means here defination.This is a function keyword.In C language we start void.
 # after def we define function name.Here maxFunction is function name
 # then we define a local variable named largest_so_far = -1
 # a is list .list like array.it stores the value.
