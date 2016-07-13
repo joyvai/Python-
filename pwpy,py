@@ -1,0 +1,40 @@
+# You probably have accounts on many different websites. It’s a bad habit to
+# use the same password for each of them because if any of those sites has
+# a security breach, the hackers will learn the password to all of your other
+# accounts. It’s best to use password manager software on your computer that
+# uses one master password to unlock the password manager. Then you can
+# copy any account password to the clipboard and paste it into the website’s
+# Password field.
+# The password manager program you’ll create in this example isn’t
+# secure, but it offers a basic demonstration of how such programs work.
+# Since you want
+# to associate each account’s name with its password, you can store these as
+# strings in a dictionary. The dictionary will be the data structure that orga-
+# nizes your account and password data. Make your program look like the
+# following:
+
+# python3
+#pw.py = An insecure password locker program
+
+passwords = {'email': 'F7minlBDDuvMJuxESSKHFhTxFtjVB6'
+			'blog':'VmALvQyKAxiVH5G8v01if1MLZF3sdt',
+			'luggage': '12345'} 
+
+import sys,pyperclip
+if len(sys.argv) < 2:
+	print ('Usage: python pw.py [account] - copy account password')
+	sys.exit()
+account = sys.argv[1] 
+# copy the right password
+
+if account in PASSWORDS:
+	pyperclip.copy(PASSWORDS[account])
+	print ('Password for ' + account + ' copied to clipboard.')
+else:
+	print ('There is no account named ' + account)
+
+# This new code looks in the PASSWORDS dictionary for the account name.
+# If the account name is a key in the dictionary, we get the value correspond-
+# ing to that key, copy it to the clipboard, and print a message saying that we
+# copied the value. Otherwise, we print a message saying there’s no account
+# with that name.
